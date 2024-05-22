@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <ul>
+        {% for producto in productos %}
+        <li>{{ producto.descripcionProducto }} - Precio: ${{ producto.precioProducto }}</li>
+        {% endfor %}
+        <p> esta es la lista de los productos que se encuentran disponibles en mi farmacia </p>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Proveedores</title>
+</head>
+<body>
+    <h1>Lista de Proveedores</h1>
+    <ul>
+        {% for proveedor in proveedores %}
+        <li>{{ proveedor.nombreProveedor }} - {{ proveedor.direccionProveedor }} - {{ proveedor.correoProveedor }}</li>
+        {% endfor %}
+    </ul>
+    <p> esta es la lista de los proveedores de mi farmacia </p>
+</body>
+</html>
