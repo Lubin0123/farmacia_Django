@@ -1,19 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ titulo }}</title>
     <!-- Agrega aquí enlaces a tus estilos CSS -->
+    <link rel="stylesheet" href="{% static 'myapp/css/index_style.css' %}">
 </head>
 <body>
     <header>
-        <h1>{{ mensaje_bienvenida }}</h1>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>{{ titulo }}</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <!-- Otros elementos de menú -->
+                </ul>
+            </div>
+        </nav>
+        <div class="hero">
+            <h1>{{ mensaje_bienvenida }}</h1>
+            <!-- Otra información o imagen de fondo -->
+        </div>
     </header>
-    <!-- Aquí puedes agregar más contenido HTML -->
+    
+    <main>
+        <section id="productos" class="section">
+            <div class="container">
+                <h2>Productos</h2>
+                <!-- Contenedor para ingresar información de productos -->
+                <div class="product-list">
+                    <!-- Aquí puedes iterar sobre los productos -->
+                    <div class="product">
+                        <h3>Nombre del Producto</h3>
+                        <p>Descripción del producto.</p>
+                        <p>Precio: $xx.xx</p>
+                        <!-- Otras características -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacto" class="section">
+            <div class="container">
+                <h2>Contacto</h2>
+                <!-- Datos de contacto -->
+                <div class="contact-info">
+                    <p>Teléfono: 3214567789</p>
+                    <p>Dirección: cl 142A#10B-12</p>
+                    <p>Email: contacto@farmacia.com</p>
+                    <!-- Otros datos de contacto -->
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; {{ titulo }} - Todos los derechos reservados</p>
+        <div class="container">
+            <p>&copy; {{ titulo }} - Todos los derechos reservados</p>
+        </div>
     </footer>
+    
     <!-- Agrega aquí enlaces a tus scripts JavaScript si es necesario -->
+    <script src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>
